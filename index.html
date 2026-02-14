@@ -10,29 +10,29 @@
       background: linear-gradient(45deg,#ff9a9e,#fad0c4);
       font-family: Arial, sans-serif;
       text-align: center;
-      overflow-x: hidden;
     }
 
     h1 {
       color: white;
-      margin-top: 40px;
+      margin-top: 50px;
+      font-size: 32px;
     }
 
     .cards {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 40px;
-      gap: 20px;
-      padding: 20px;
+      margin-top: 50px;
+      gap: 40px;
+      padding: 40px;
     }
 
     .card {
-      width: 220px;
-      height: 280px;
+      width: 300px;
+      height: 380px;
       background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
       cursor: pointer;
       transition: 0.4s;
       position: relative;
@@ -40,6 +40,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
       text-align: center;
     }
 
@@ -47,20 +48,36 @@
       transform: scale(1.05);
     }
 
+    .front {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
     .card-content {
-      padding: 15px;
       display: none;
       width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
 
     .card img {
-      width: 100%;
-      border-radius: 15px;
+      width: 220px;
+      border-radius: 20px;
     }
 
     .card h3 {
       color: #ff4e8a;
-      margin-top: 10px;
+      font-size: 22px;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 0 10px;
     }
 
   </style>
@@ -72,9 +89,10 @@
 
 <div class="cards">
 
-  <!-- 1 -->
+  <!-- Card Template Repeat -->
+
   <div class="card" onclick="openCard(this)">
-    <h2>💌 Open Me</h2>
+    <div class="front">💌 Tap to Open</div>
     <div class="card-content">
       <img src="https://media.tenor.com/dvR6zK8C8xkAAAAC/anime-cat-blush.gif">
       <h3>Tu jab hasti hai na 😍</h3>
@@ -82,9 +100,8 @@
     </div>
   </div>
 
-  <!-- 2 -->
   <div class="card" onclick="openCard(this)">
-    <h2>💖 Open Me</h2>
+    <div class="front">💖 Tap to Open</div>
     <div class="card-content">
       <img src="https://media.tenor.com/0AVbKGY_MxMAAAAC/anime-cat-love.gif">
       <h3>Pagli Rajjo 🥹</h3>
@@ -92,9 +109,8 @@
     </div>
   </div>
 
-  <!-- 3 -->
   <div class="card" onclick="openCard(this)">
-    <h2>🎁 Open Me</h2>
+    <div class="front">🎁 Tap to Open</div>
     <div class="card-content">
       <img src="https://media.tenor.com/QWvF2kYbqCMAAAAC/anime-cat-crying.gif">
       <h3>Sorry Yrr 🥺</h3>
@@ -102,9 +118,8 @@
     </div>
   </div>
 
-  <!-- 4 -->
   <div class="card" onclick="openCard(this)">
-    <h2>🌸 Open Me</h2>
+    <div class="front">🌸 Tap to Open</div>
     <div class="card-content">
       <img src="https://media.tenor.com/9s1v8VxXq4cAAAAC/cute-cat.gif">
       <h3>Meri Dearest 💖</h3>
@@ -112,9 +127,8 @@
     </div>
   </div>
 
-  <!-- 5 -->
   <div class="card" onclick="openCard(this)">
-    <h2>💫 Open Me</h2>
+    <div class="front">💫 Tap to Open</div>
     <div class="card-content">
       <img src="https://media.tenor.com/LsR9GqU_4pEAAAAC/chibi-cat.gif">
       <h3>Promise 💍</h3>
@@ -122,9 +136,8 @@
     </div>
   </div>
 
-  <!-- 6 -->
   <div class="card" onclick="openCard(this)">
-    <h2>🫂 Open Me</h2>
+    <div class="front">🫂 Tap to Open</div>
     <div class="card-content">
       <img src="https://media.tenor.com/4bL6mW5VgXsAAAAC/cute-cat-sad.gif">
       <h3>Jab tum sad hoti ho 🥺</h3>
@@ -132,15 +145,14 @@
     </div>
   </div>
 
-  <!-- 7 Updated -->
   <div class="card" onclick="openCard(this)">
-    <h2>👑 Final Surprise</h2>
+    <div class="front">👑 Final Surprise</div>
     <div class="card-content">
       <img src="https://media.tenor.com/0AVbKGY_MxMAAAAC/anime-cat-love.gif">
       <h3>My Dearest Rajjo 💖</h3>
       <p>
-      Whenever you feel scared,<br>
-      always remember I am sitting beside you 🫂
+        Whenever you feel scared,<br>
+        always remember I am sitting beside you 🫂
       </p>
     </div>
   </div>
@@ -148,12 +160,12 @@
 </div>
 
 <script>
-
 function openCard(card){
-  card.innerHTML = card.querySelector(".card-content").innerHTML;
+  card.querySelector(".front").style.display = "none";
+  let content = card.querySelector(".card-content");
+  content.style.display = "flex";
 }
-
 </script>
 
 </body>
-</html>
+        </html>
