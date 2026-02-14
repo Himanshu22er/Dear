@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rajjo 7 Surprise Cards 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg,#ff9a9e,#fad0c4);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: white;
+      margin-top: 40px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 220px;
+      height: 280px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 15px;
+      display: none;
+      width: 100%;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .card h3 {
+      color: #ff4e8a;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>Rajjo 💖 Open Your 7 Surprise Cards 🥰</h1>
+
+<div class="cards">
+
+  <!-- 1 -->
+  <div class="card" onclick="openCard(this)">
+    <h2>💌 Open Me</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/dvR6zK8C8xkAAAAC/anime-cat-blush.gif">
+      <h3>Tu jab hasti hai na 😍</h3>
+      <p>Mera pura din ban jata hai 🫂</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card" onclick="openCard(this)">
+    <h2>💖 Open Me</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/0AVbKGY_MxMAAAAC/anime-cat-love.gif">
+      <h3>Pagli Rajjo 🥹</h3>
+      <p>Can do anything for your smile 💞</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card" onclick="openCard(this)">
+    <h2>🎁 Open Me</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/QWvF2kYbqCMAAAAC/anime-cat-crying.gif">
+      <h3>Sorry Yrr 🥺</h3>
+      <p>Tum bina sab boring hai 😭</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card" onclick="openCard(this)">
+    <h2>🌸 Open Me</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/9s1v8VxXq4cAAAAC/cute-cat.gif">
+      <h3>Meri Dearest 💖</h3>
+      <p>Tum meri life ka sabse pyara hissa ho 🫶</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card" onclick="openCard(this)">
+    <h2>💫 Open Me</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/LsR9GqU_4pEAAAAC/chibi-cat.gif">
+      <h3>Promise 💍</h3>
+      <p>Har situation me tumhare saath rahunga 🤍</p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card" onclick="openCard(this)">
+    <h2>🫂 Open Me</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/4bL6mW5VgXsAAAAC/cute-cat-sad.gif">
+      <h3>Jab tum sad hoti ho 🥺</h3>
+      <p>Mera dil bhi thoda sa toot jata hai 💔</p>
+    </div>
+  </div>
+
+  <!-- 7 Updated -->
+  <div class="card" onclick="openCard(this)">
+    <h2>👑 Final Surprise</h2>
+    <div class="card-content">
+      <img src="https://media.tenor.com/0AVbKGY_MxMAAAAC/anime-cat-love.gif">
+      <h3>My Dearest Rajjo 💖</h3>
+      <p>
+      Whenever you feel scared,<br>
+      always remember I am sitting beside you 🫂
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+function openCard(card){
+  card.innerHTML = card.querySelector(".card-content").innerHTML;
+}
+
+</script>
+
+</body>
+</html>
